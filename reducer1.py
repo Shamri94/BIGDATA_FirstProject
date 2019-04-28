@@ -45,7 +45,7 @@ for line in sys.stdin:
         # count was not a number, so silently
         # ignore/discard this line
         continue
-        print 'errore'
+        # print 'error'
 
     # this IF-switch only works because Hadoop sorts map output
     # by key (here: ticker_date) before it is passed to the reducer
