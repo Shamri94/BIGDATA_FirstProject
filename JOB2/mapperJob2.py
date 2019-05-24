@@ -7,12 +7,12 @@ import csv
 year_2004 = 2004
 year_2018 = 2018
 
-
 dict_ticker_sector = {}
 
 # reading from CSV
-with open('historical_stocks.csv') as csv_file:
-    csv_reader = csv.reader(csv_file, delimiter=',')
+with open('historical_stocks.csv') as file:
+    csv_reader = csv.reader(file, delimiter=',')
+    # ignore first line
     firstLine = True
 
     for row in csv_reader:
@@ -29,7 +29,7 @@ for line in sys.stdin:
     dataList = line.strip().split(',') 
     if len(dataList) == 8:
         ticker, _, close, _, _, _, volume, date = dataList
-        #ignore file's first row
+        # ignore file's first row
         if ticker != 'ticker':
             year = int(date[0:4])
 
