@@ -16,7 +16,7 @@ ticker = None
 
 list_ticker = []
 
-print('Ticker\tClose_Price_Variance\tLowest_Price\tHighest_Price\tDaily_Average_Volume\n')
+print('Ticker\tClose_Price_Percentage_Change\tLowest_Price\tHighest_Price\tDaily_Average_Volume\n')
 # input comes from STDIN
 for line in sys.stdin:
     # remove leading and trailing whitespace and insert the data in valueList
