@@ -39,6 +39,7 @@ def write_output():
         last_day_close += dict_ticker_InitialCurrent_close[ticker]['current']
     # compute the trend percentage
     perc = (last_day_close - first_day_close)/first_day_close*100
+    perc = int(round(perc))
     if perc < 0:
         print(current_sector, current_year, total_volume, str(perc)+'%', total_close/days, sep='\t')
     else:
@@ -47,7 +48,7 @@ def write_output():
 
 
 
-print('Sector\tYear\tTotal_Volume\tPercent_Variance\tDaily_Average_Close_Price\n')
+print('Sector\tYear\tTotal_Volume\tTrend\tDaily_Average_Close_Price\n')
 # input comes from STDIN
 for line in sys.stdin:
      # remove leading and trailing whitespace and insert the data in valueList
